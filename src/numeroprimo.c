@@ -16,9 +16,9 @@ int main() {
 
     //ciclo per controllare che il numero fornito non abbia divisori compresi tra 2 e la sua radice quadrata
     for(int i = 2; i < radice; i++){
-        if(num % i == 0){
-            primo = 0;
-            break;
+        if(num % i == 0){ //entrando in questa condizione vuol dire che avremmo trovato un ulteriore divisore oltre a 2 e se stesso
+            primo = 0; //setto il flag primalità
+            break; //esco dal ciclo for a prescindere dal contatore i
         }
     }
     //terminato il ciclo verifico che il flag sia rimasto a 1 e il numero inserito sia diverso da 1
