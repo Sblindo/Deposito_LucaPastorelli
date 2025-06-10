@@ -23,9 +23,9 @@ int main() {
     }
     //terminato il ciclo verifico che il flag sia rimasto a 1 e il numero inserito sia diverso da 1
     if(primo && num != 1){
-        printf("Il numero inserito è un numero primo.\n");
+        printf("%d è un numero primo.\n",num);
     } else {
-        printf("Il numero inserito non è un numero primo.\n");
+        printf("%d non è un numero primo.\n",num);
     }
 
     return 0;
