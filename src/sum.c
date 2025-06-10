@@ -1,5 +1,5 @@
 #include <stdio.h>
-int sum();
+int sum(); //dichiaro la funzione che richiamo in main
 
 int main(){
     int x = 10, y = 20;
@@ -8,6 +8,6 @@ int main(){
     return 0;
 }
 
-int sum(int a, int b){
+int sum(int a, int b){ //definisco i parametri ed il corpo della funzione 
     return a+b;
 }
