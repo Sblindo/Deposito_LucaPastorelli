@@ -8,7 +8,7 @@ int main() {
     int num, primo; //interi dove inserisco il numero fornito dall'utente ed il flag con cui traccio la primalità
     double radice; //double dove inserisco la radice quadrata del'intero fornito dall'utente 
 
-    printf("Inserisci un numero: "); //stampo il testo (potrei farlo direttamente dallo scanf)
+    printf("Inserisci un numero: "); //stampo il testo
     scanf("%d", &num); //leggo il numero intero che fornisce l'utente
 
     radice = sqrt(num); //calcolo la radice quadrata del numero in oggetto
