@@ -1,5 +1,5 @@
 #include <stdio.h>
 
 int main(){
-    printf("<%s>\n", "\x20");
+    printf("<%s>\n", L"\u0024");
 }
