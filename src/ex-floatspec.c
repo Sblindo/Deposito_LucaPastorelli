@@ -18,6 +18,15 @@ int main(void) {
         sum += 0.000001f;           // accumulo un milionesimo un milione di volte
     }
 
+    // 4bis) Stessi passaggi ma utilizzando il while
+    /*
+    int i = 0;
+    while(i < 1000000){
+        sum += 0.000001f;
+        i++;
+    }
+    */
+
     // 5) Stampa dei risultati
     printf("f1 = %.6f, d1 = %.6f\n", f1, d1);
     printf("f2 = %.1f, d2 = %.2f\n", f2, d2);
