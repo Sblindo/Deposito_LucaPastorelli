@@ -25,4 +25,6 @@ int main(){
     sum = num1 + num2;
 
     printf("\nIl tuo nome è: %s e la somma di %d e %d è %d\n",nome,num1,num2,sum);
+
+    return 0;
 }
