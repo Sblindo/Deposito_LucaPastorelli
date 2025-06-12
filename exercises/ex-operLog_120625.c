@@ -56,7 +56,7 @@ int main(){
     }
 
     if(!(num1 == 100 || num2 == 100 || num3 == 100)){
-        printf("Nessuno dei tre numeri è uguale a zero\n");
+        printf("Nessuno dei tre numeri è uguale a 100\n");
     }else{
         printf("Almeno uno dei tre numeri è uguale a 100\n");
     }
