@@ -25,9 +25,9 @@ void decimalToBinary(int num) {
     
 
 int main() {
-   int num = 36;
+   int num = 35;
    decimalToBinary(num);
-   num <<= 1;
+   num >>= 1;
    decimalToBinary(num);
    return 0;
 }
