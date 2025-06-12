@@ -41,8 +41,10 @@ int main(){
     }
 
     //verifico se almeno uno dei due numeri è pari e diverso da zero
-    if((((num1 % 2) == 0) || ((num2 % 2) == 0)) && !(num2 == 0)){
+    if(((!(num1 % 2)) || (!(num2 % 2))) && !(num2 == 0)){
         printf("Almeno uno dei due numeri è pari\n");
+    } else{
+        printf("Nessuno dei due numeri è pari\n");
     }
     
     return 0;
