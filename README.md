@@ -2,10 +2,10 @@
 C Class repository
 
 ## bin  
-    -->  eseguibili compilati
+> eseguibili compilati
 
 ## src  
-    -->  source code
+>  source code
 
 ## exercises
-    -->  esercizi specifici
+>  esercizi specifici
