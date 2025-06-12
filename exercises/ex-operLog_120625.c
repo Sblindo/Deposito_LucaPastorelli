@@ -40,7 +40,7 @@ int main(){
     if(prod < x){
         printf("Il prodotto di num2 e num3 %d è minore della soglia %d\n", prod, x);
     }else{
-        printf("Il prodotto di num2 e num3 %d è maggiore della soglia %d\n", prod, x);
+        printf("Il prodotto di num2 e num3 %d non è minore della soglia %d\n", prod, x);
     }
 
     printf("\n");
