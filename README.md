@@ -1,11 +1,11 @@
-#Deposito_LucaPastorelli
+# Deposito_LucaPastorelli
 C Class repository
 
-##bin  
+## bin  
     -->  eseguibili compilati
 
-##src  
+## src  
     -->  source code
 
-##exercises
+## exercises
     -->  esercizi specifici
