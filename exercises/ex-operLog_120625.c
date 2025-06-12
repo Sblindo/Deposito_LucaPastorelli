@@ -31,6 +31,8 @@ int main(){
     //utilizzo le condizioni per verificare se somma e prodotto siano minori o maggiori del valore di soglia
     if(somma > x){
         printf("La somma di num1 e num2 %d è maggiore della soglia %d\n", somma, x);
+    }else if(somma == x){
+        printf("La somma di num1 e num2 %d è uguale alla soglia %d\n", somma, x);
     }else{
         printf("La somma di num1 e num2 %d è minore della soglia %d\n", somma, x);
     }
