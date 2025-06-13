@@ -8,4 +8,4 @@
 >
 > [ex-operLog_120625.c](/exercises/ex-operLog120625.c)  --> bin/ex-operLog_120625.c
 >
-> 
+> [ex-cond_130625.c](/exercises/ex-cond130625.c)    --> bin/ex-cond_130625
