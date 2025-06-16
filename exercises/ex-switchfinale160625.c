@@ -3,7 +3,7 @@
 
 int main(){
 
-    int segreta = 69;
+    int segreta = 24;
     int menu;
     char ruolo[11];
 
@@ -15,30 +15,48 @@ int main(){
     printf("Inserisci la scelta di menù: (1|2|3) ");
     scanf("%d", &menu);
 
-    
+    //faccio i controlli richiesti
+    if(strcmp(ruolo, "studente") == 0 && (menu == 1 || menu == 2)){
+        printf("Accesso materiali didattici\n");
+    }else if(strcmp(ruolo, "docente") == 0 && menu == 2){
+        printf("Accesso alla gestione corsi\n");
+    }else if(strcmp(ruolo, "ospite") == 0){
+        printf("Area Informativa\n");
+    }else{
+        printf("Opzione non disponibile\n");
+    }
 
-    //effettuo i controlli partendo dalla voce di menù
+    //
     switch(menu){
         case 1:
-            if(strcmp(ruolo, "studente") == 0){
-                printf("Accesso materiali didattici\n");
-            }
             printf("Hai scelto: Visualizza\n");
+            if(strcmp(ruolo, "ospite") == 0){
+                printf("La varibile segreta esiste!\n");
+            }else if(strcmp(ruolo, "studente") == 0 || strcmp(ruolo, "docente") == 0){
+                printf("La variabile segreta è: %d\n", segreta);
+            }else{
+                printf("Ti piacerebbe sapere se esite una variabile segreta!!\n");
+            }
             break;
         case 2:
-            if(strcmp(ruolo, "studente") == 0){
-                printf("Accesso materiali didattici\n");
-            }else if(strcmp(ruolo, "docente") == 0){
-                printf("Accesso alla gestione corsi\n");
-                printf("La variabile segreta è: %d\n", segreta);
-            }
             printf("Hai scelto: Modifica\n");
+            if(strcmp(ruolo, "ospite") == 0){
+                printf("La varibile segreta esiste!\n");
+            }else if(strcmp(ruolo, "studente") == 0){
+                printf("La variabile segreta è: %d\n", segreta);
+            }else if(strcmp(ruolo, "docente") == 0){
+                printf("Modifica la variabile segreta: ");
+                scanf("%d", &segreta);
+                printf("Ora la variabile segreta è: %d\n", segreta);
+            }else{
+                printf("Ti piacerebbe sapere se esite una variabile segreta!!\n");
+            }
             break;
         case 3:
             printf("Hai scelto: Esci\n");
             break;
         default:
-            printf("Opzione di menù non valida\n");
+            printf("Hai scelto una voce non disponibile in menù\n");
             break;
     }
 
