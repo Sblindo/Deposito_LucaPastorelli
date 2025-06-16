@@ -4,11 +4,11 @@
 int main(){
 
     int giornoInt; //variabile giorno in intero 1 < giorno < 7
-    char giorno[10]; //variabile stringa inserita dall'utente
+    char giorno[11]; //variabile stringa inserita dall'utente
     
     //faccio inserire la stringa del giorno dall'utente
     printf("Inserisci il giorno della settimana: ");
-    scanf("%9s", giorno);
+    scanf("%10s", giorno);
 
     //valorizzo giornoInt con l'intero corrispondente al giorno della settimana
     if(strcmp(giorno, "lunedì") == 0){
