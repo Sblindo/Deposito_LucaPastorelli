@@ -15,7 +15,7 @@ int main(){
         if(strcmp(ruolo,"studente") == 0 || strcmp(ruolo,"docente") == 0 || strcmp(ruolo,"ospite") == 0){
             break;
         }else{
-            
+            printf("Ruolo non valido\nI ruoli disponibili sono studente | docente | ospite\n");
         }
     }
     
@@ -28,7 +28,7 @@ int main(){
         if(menu <= 3 && menu >= 1){
             break;
         }else{
-            printf("Le uniche opzioni sono 1 | 2 | 3\n");
+            printf("Opzione di menù non valida\nLe uniche opzioni sono 1 | 2 | 3\n");
         }
     }
     //inserisco la scelta di menù
