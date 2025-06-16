@@ -8,17 +8,31 @@ int main(){
     char ruolo[11];
 
     //inserisce il ruolo
-    printf("Inserisci il tuo ruolo: (studente|docente|ospite) ");
-    scanf("%10s", ruolo);
+    while(1){
+        printf("Inserisci il tuo ruolo: (studente|docente|ospite) ");
+        scanf("%10s", ruolo);
 
-    if(!(strcmp(ruolo,"studente") == 0 || strcmp(ruolo,"docente") == 0 || strcmp(ruolo,"ospite") == 0)){
-        printf("Ruolo non disponibile!\nEsegui nuovamente il programma!\n");
-        return 1;
+        if(strcmp(ruolo,"studente") == 0 || strcmp(ruolo,"docente") == 0 || strcmp(ruolo,"ospite") == 0){
+            break;
+        }else{
+            
+        }
     }
+    
 
+    
+    while(1){
+        printf("Inserisci la scelta di menù: (1|2|3) ");
+        scanf("%d", &menu);
+
+        if(menu <= 3 && menu >= 1){
+            break;
+        }else{
+            printf("Le uniche opzioni sono 1 | 2 | 3\n");
+        }
+    }
     //inserisco la scelta di menù
-    printf("Inserisci la scelta di menù: (1|2|3) ");
-    scanf("%d", &menu);
+    
 
     //verifica if else casi specifici
     if(strcmp(ruolo, "studente") == 0 && menu == 1){ //se menu == 1 e ruolo studente
