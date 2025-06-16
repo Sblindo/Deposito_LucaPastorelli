@@ -31,7 +31,6 @@ int main(){
             printf("Opzione di menù non valida\nLe uniche opzioni sono 1 | 2 | 3\n");
         }
     }
-    //inserisco la scelta di menù
     
 
     //verifica if else casi specifici
