@@ -27,6 +27,8 @@ int main(){
         printf("Accesso alla gestione corsi\n");
     }else if(strcmp(ruolo, "ospite") == 0){ //qualsiasi menu e ruolo ospite
         printf("Area informativa\n");
+    }else{
+        printf("Opzione non disponibile!\n");
     }
 
 
@@ -36,6 +38,8 @@ int main(){
             printf("Hai scelto: Visualizza\n");
             if(strcmp(ruolo, "studente") == 0 || strcmp(ruolo, "docente") == 0){ //docente e studente possono visualizzare la variabile segreta
                 printf("La variabile segreta è: %d\n", segreta);
+            }else{
+                printf("Solo studenti e docenti possono visualizzare la variabile segreta!\n");
             }
             break;
         case 2:
@@ -44,6 +48,8 @@ int main(){
                 printf("Modifica la variabile segreta, che ora vale %d: ", segreta);
                 scanf("%d", &segreta);
                 printf("Ora la variabile segreta vale: %d\n", segreta);
+            }else{
+                printf("Solo i docenti possono modificare la variabile segreta!\n");
             }
             break;
         case 3:
