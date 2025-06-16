@@ -20,7 +20,7 @@ int main(){
     }
     
 
-    
+    //inserisci l'opzione di menù
     while(1){
         printf("Inserisci la scelta di menù: (1|2|3) ");
         scanf("%d", &menu);
