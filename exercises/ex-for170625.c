@@ -29,8 +29,10 @@ int main(){
         }
     }
 
+    size_t st = sizeof(cont);
     if(cont > 0){ //Se ho inserito almeno un numero è diverso da zero stampo sullo stdout
         printf("Il numero di dispari inseriti è: %d\n", dispari);
+        printf("Size_t di cont: %zu", st);
     }else{
         printf("Se non inserisci un intero > 0 non posso contare i dispari!!\n");
     }
