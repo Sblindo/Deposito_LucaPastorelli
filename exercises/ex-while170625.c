@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(){
-    int num = 1;
+    int num = 1; //valorizzo a 1 perchè cosi num potrà essere usato nel while
     int somma = 0;
 
     while(num){
