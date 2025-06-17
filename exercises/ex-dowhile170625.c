@@ -7,7 +7,7 @@ int main(){
 
     do{
 
-        //verifico la scelta dell'utente
+        //faccio inserire l'intero all'utente
             printf("Inserisci un numero intero: ");
             scanf("%d", &num);
 
@@ -19,14 +19,10 @@ int main(){
         do{
             printf("Vuoi Continuare? (s | n) ");
             scanf(" %c", &scelta);
-        }while(scelta != 's' && scelta != 'n');
+        }while(scelta != 's' && scelta != 'n'); //chiedo all'utente se vuole continuare fino a quando la scelta non è 's' o 'n'
         
 
-        
-        
-
-
-    }while(scelta != 'n');
+    }while(scelta != 'n'); //controllo se la risposta è n
 
     printf("Il numero di interi pari inseriti è: %d\n", cont);
 
