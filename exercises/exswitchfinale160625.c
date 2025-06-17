@@ -13,6 +13,9 @@ int main(){
         printf("Inserisci il tuo ruolo: (studente|docente|ospite) oppure esci per uscire dal programma: ");
         scanf("%10s", ruolo);
 
+        if(strcmp(ruolo,"\n") == 0 || strcmp(ruolo,"\0") == 0){
+            strncpy(ruolo, "nada", strlen("nada"));
+        }
         if(strcmp(ruolo,"studente") == 0 || strcmp(ruolo,"docente") == 0 || strcmp(ruolo,"ospite") == 0){
             break;
         }else if(strcmp(ruolo,"esci") == 0){
