@@ -11,7 +11,7 @@ int main(){
     scanf("%d", &cont);
 
     for(int i = 0; i < cont; i++){ //ciclo for per il numero cont
-        printf("Inserisci un numero compreso tra 10 e 100: ");
+        printf("Inserisci un numero intero tra 10 e 100: ");
         scanf("%d", &num);
 
         while(num < 10 || num > 100){ //verifico che il numero sia compreso tra 10 e 100 altrimenti lo chiedo di nuovo
@@ -25,8 +25,10 @@ int main(){
         }
     }
 
-    if(dispari != 0){ //Se dispari è diverso da zero stampo sullo stdout
+    if(cont != 0){ //Se ho inserito almeno un numero è diverso da zero stampo sullo stdout
         printf("Il numero di dispari inseriti è: %d\n", dispari);
+    }else{
+        printf("Se non inserisci nulla non posso contare i dispari!!\n");
     }
     
     return 0;
