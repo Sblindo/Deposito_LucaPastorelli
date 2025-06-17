@@ -25,7 +25,7 @@ int main(){
         }
     }
 
-    if(cont != 0){
+    if(dispari != 0){
         printf("Il numero di dispari inseriti è: %d\n", dispari);
     }
     
