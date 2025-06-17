@@ -2,6 +2,7 @@
 
 int main(){
 
+    int i = 0;
     int cont; //contatore numeri che inserirà l'utente
     int dispari = 0; //contatore numeri dispari
     int num; //numero inserito dall'utente
@@ -10,7 +11,7 @@ int main(){
     printf("Quanti numeri vuoi inserire?: ");
     scanf("%d", &cont);
 
-    for(int i = 0; i < cont; i++){ //ciclo for per il numero cont
+    for(; i < cont; i++){ //ciclo for per il numero cont
 
         printf("Inserisci un numero intero tra 10 e 100: ");
         scanf("%d", &num);
