@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 int main(){
@@ -8,21 +9,24 @@ int main(){
     char ruolo[11];
 
     //inserisce il ruolo
-    while(1){
-        printf("Inserisci il tuo ruolo: (studente|docente|ospite) ");
+    do{
+        printf("Inserisci il tuo ruolo: (studente|docente|ospite) oppure esci per uscire dal programma: ");
         scanf("%10s", ruolo);
 
         if(strcmp(ruolo,"studente") == 0 || strcmp(ruolo,"docente") == 0 || strcmp(ruolo,"ospite") == 0){
             break;
+        }else if(strcmp(ruolo,"esci") == 0){
+            exit(0);
         }else{
             printf("Ruolo non valido\nI ruoli disponibili sono studente | docente | ospite\n");
         }
     }
+    while(1);
     
 
     //inserisci l'opzione di menù
-    while(1){
-        printf("Inserisci la scelta di menù: (1|2|3) ");
+    do{
+        printf("Inserisci la scelta di menù: (1 = Visualizza|2 = Modifica|3 = Esci): ");
         scanf("%d", &menu);
 
         if(menu <= 3 && menu >= 1){
@@ -31,6 +35,7 @@ int main(){
             printf("Opzione di menù non valida\nLe uniche opzioni sono 1 | 2 | 3\n");
         }
     }
+    while(1);
     
 
     //verifica if else casi specifici
