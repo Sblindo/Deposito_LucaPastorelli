@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main(){
+
+    int cont; //contatore numeri che inserirà l'utente
+    int dispari = 0; //contatore numeri dispari
+    int num; //numero inserito dall'utente
+
+    //chiede all'utente quanti numeri vuole inserire
+    printf("Quanti numeri vuoi inserire?: ");
+    scanf("%d", &cont);
+
+    for(int i = 0; i < cont; i++){ //ciclo for per il numero cont
+        printf("Inserisci un numero compreso tra 10 e 100: ");
+        scanf("%d", &num);
+
+        while(num < 10 || num > 100){ //verifico che il numero sia compreso tra 10 e 100 altrimenti lo chiedo di nuovo
+            printf("Il numero deve essere compreso tra 10 e 100\n");
+            printf("Inserisci un numero intero tra 10 e 100: ");
+            scanf("%d", &num);
+        }
+
+        if(num % 2 != 0){ //se dispari aumento il contatore dispari
+            dispari++;
+        }
+    }
+
+    if(cont != 0){
+        printf("Il numero di dispari inseriti è: %d\n", dispari);
+    }
+    
+    return 0;
+}
