@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int maximum(int, int); //calcola il massimo tra due interi in ingresso
+int maximum(int *, int *); //calcola il massimo tra due interi in ingresso
 int quad(int); //calcola il quadrato di un intero in ingresso
 
 int main(int argc, char *argv[]){ //considero gli argomenti inseriti col programma
@@ -18,7 +18,7 @@ int main(int argc, char *argv[]){ //considero gli argomenti inseriti col program
     a = atoi(argv[1]); //converto il primo argomento in un intero (atoi accetta un puntatore ad una stringa)
     b = atoi(argv[2]); //converto il secondo argomento in un intero (atoi accetta un puntatore ad una stringa)
     
-    printf("Il massimo tra %d e %d è: %d\n", a, b, maximum(a,b)); //invio sullo stream stdout il risultato della funzione maximum
+    printf("Il massimo tra %d e %d è: %d\n", a, b, maximum(&a,&b)); //invio sullo stream stdout il risultato della funzione maximum
     printf("Il quadrato di %d è: %d\n", a, quad(a)); //invio sullo stream stdout il risultato della funzione quad di a
     printf("Il quadrato di %d è: %d\n", b, quad(b)); //invio sullo stream stdout il risultato della funzione quad di b
 
@@ -26,11 +26,11 @@ int main(int argc, char *argv[]){ //considero gli argomenti inseriti col program
 
 }
 
-int maximum(int x, int y){
+int maximum(int *x, int *y){ //utilizzo dei puntatori a due interi come parametri 
 
-    int max = x; //considero il primo intero come massimo
+    int max = *x; //considero il primo intero come massimo
 
-    if(y > x) max = y; //se il secondo intero è maggiore di max lo sostituisco al valore massimo
+    if(*y > *x) max = *y; //se il secondo intero è maggiore di max lo sostituisco al valore massimo
 
     return max; //restituisco la variabile max
 }
