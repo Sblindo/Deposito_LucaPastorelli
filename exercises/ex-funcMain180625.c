@@ -18,9 +18,9 @@ int main(int argc, char *argv[]){ //considero gli argomenti inseriti col program
     a = atoi(argv[1]); //converto il primo argomento in un intero (atoi accetta un puntatore ad una stringa)
     b = atoi(argv[2]); //converto il secondo argomento in un intero (atoi accetta un puntatore ad una stringa)
     
-    printf("Il massimo tra %d e %d è: %d\n", a, b, maximum(a,b)); //invio sullo stream stdio il risultato della funzione maximum
-    printf("Il quadrato di %d è: %d\n", a, quad(a)); //invio sullo stream stdio il risultato della funzione quad di a
-    printf("Il quadrato di %d è: %d\n", b, quad(b)); //invio sullo stream stdio il risultato della funzione quad di b
+    printf("Il massimo tra %d e %d è: %d\n", a, b, maximum(a,b)); //invio sullo stream stdout il risultato della funzione maximum
+    printf("Il quadrato di %d è: %d\n", a, quad(a)); //invio sullo stream stdout il risultato della funzione quad di a
+    printf("Il quadrato di %d è: %d\n", b, quad(b)); //invio sullo stream stdout il risultato della funzione quad di b
 
     return 0; //esco dal programma senza accodare errori 
 
