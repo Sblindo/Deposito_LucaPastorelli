@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int  inserisci(int a, int num[]);
 float media(int a, int num[]);
@@ -6,8 +7,9 @@ int sopraMedia(int a, int num[], float b);
 
 int main(int argc, char *argv[]){
 
-    int numeri[50], quanti = 0, sopra = 0;
+    int quanti = 0, sopra = 0;
     float mediaArr; 
+    size_t n;
 
     printf("Dimmi quanti numeri vuoi inserire: ");
     scanf("%d", &quanti);
@@ -16,6 +18,14 @@ int main(int argc, char *argv[]){
         printf("Puoi inserirne massimo 50!\n");
         printf("Dimmi quanti numeri vuoi inserire: ");
         scanf("%d", quanti);
+    }
+
+    n = (size_t)quanti;
+
+    int *numeri = malloc(n * sizeof *numeri);
+    if (numeri == NULL) {                     // 2) Controllo di errore
+        fprintf(stderr, "malloc fallita\n");
+        return EXIT_FAILURE;
     }
 
     if(!(inserisci(quanti, numeri))){
@@ -27,7 +37,8 @@ int main(int argc, char *argv[]){
     }
 
     
-
+    free(numeri);
+    numeri = NULL; 
     return 0;
 }
 
