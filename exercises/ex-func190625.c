@@ -14,7 +14,7 @@ int main(int argc, char *argv[]){
     printf("Dimmi quanti numeri vuoi inserire: ");
     scanf("%d", &quanti);
 
-    while(quanti <= 0 || quanti > 50){ //il numero di interi deve essere compreso tra 1 e 50 oppure lo chiede di nuovo
+    while(quanti <= 0 || quanti > 5000){ //il numero di interi deve essere compreso tra 1 e 50 oppure lo chiede di nuovo
         printf("Puoi inserirne massimo 50!\n");
         printf("Dimmi quanti numeri vuoi inserire: ");
         scanf("%d", quanti);
@@ -44,8 +44,12 @@ int main(int argc, char *argv[]){
 
 int inserisci(int a, int num[]){
     for(int i = 0; i < a; i++){
+        num[i] = (i+1)*10;
+        //printf("Inserito in num[%d]: %d\n", i, num[i]);
+        /*
         printf("Inserisci il numero %d: ", i+1);
         scanf("%d", &num[i]);
+        */
     }
 
     return 0;
