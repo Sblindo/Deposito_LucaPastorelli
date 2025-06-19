@@ -1,13 +1,13 @@
 #include <stdio.h>
 
-int  inserisci(int c, int num[]);
-int media(int d, int num1[]);
-int sopraMedia(int e, int num2[]);
-int sottoMedia(int f, int num3[]);
+int  inserisci(int a, int num[]);
+float media(int a, int num[]);
+int sopraMedia(int a, int num[], float b);
 
 int main(int argc, char *argv[]){
 
-    int numeri[50], quanti; //Contatore quanti numeri vuole inserire l'utente
+    int numeri[50], quanti = 0, sopra = 0;
+    float mediaArr; 
 
     printf("Dimmi quanti numeri vuoi inserire: ");
     scanf("%d", &quanti);
@@ -19,9 +19,11 @@ int main(int argc, char *argv[]){
     }
 
     if(!(inserisci(quanti, numeri))){
+        mediaArr = media(quanti, numeri);
+        sopra = sopraMedia(quanti, numeri, mediaArr);
         printf("\n");
-        printf("La media dei numeri inseriti è: %d\n", media(quanti, numeri));
-        printf("%d numeri sono sopra la media!\n", sopraMedia(quanti, numeri));
+        printf("La media dei numeri inseriti è: %.2f\n", mediaArr);
+        printf("%d numeri sono sopra la media!\n", sopra);
     }
 
     
@@ -29,8 +31,8 @@ int main(int argc, char *argv[]){
     return 0;
 }
 
-int inserisci(int c, int num[]){
-    for(int i = 0; i < c; i++){
+int inserisci(int a, int num[]){
+    for(int i = 0; i < a; i++){
         printf("Inserisci il numero %d: ", i+1);
         scanf("%d", &num[i]);
     }
@@ -38,38 +40,26 @@ int inserisci(int c, int num[]){
     return 0;
 }
 
-int media(int d, int num1[]){ //calcola la media dei numeri in un array di int
-    int somma, med;
+float media(int a, int num[]){ //calcola la media dei numeri in un array di int
+    int somma = 0;
+    float med;
 
-    for(int i = 0; i < d; i++){
-        somma += num1[i];
+    for(int i = 0; i < a; i++){
+        somma += num[i];
     }
 
-    med = somma / d;
+    med = (float)somma / a;
 
     return med;
 }
 
-int sopraMedia(int e, int num2[]){
-    int media1, cont = 0;
+int sopraMedia(int a, int num[], float b){
+    int cont = 0;
 
-    media1 = media(e, num2);
-
-    for(int j = 0; j < e; j++){
-        if(num2[j] > media1)cont++;
+    for(int i = 0; i < a; i++){
+        if(num[i] > b)cont++;
     }
 
     return cont;
 }
 
-int sottoMedia(int f, int num3[]){
-    int media2, cont1 = 0;
-
-    media2 = media(f, num3);
-
-    for(int j = 0; j < f; j++){
-        if(num3[j] < media2) cont1++;
-    }
-
-    return cont1;
-}
