@@ -12,6 +12,7 @@ int trova(Contatto *contact,size_t m, char nome[31]){
 
     for(size_t i = 0; i < m; i++){
         if(strcmp(contact[(int)i].nome, nome) == 0)trovato = 1;
+        if(trovato)break;
     }
 
     return trovato;
