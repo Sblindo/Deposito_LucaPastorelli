@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 typedef struct{
-    char modello[30];
+    char modello[31];
     int anno;
 } Macchina;
 
@@ -22,7 +22,7 @@ int main(){
 
     for(int i = 0; i < quante; i++){
         printf("Inserisci il modello: ");
-        scanf("%29s", macc[i].modello);
+        scanf("%30s", macc[i].modello);
         printf("Inserisci l'anno: ");
         scanf("%d", &macc[i].anno);
     }
