@@ -2,13 +2,13 @@
 #include <stdlib.h>
 
 int maximum(int, int); //calcola il massimo tra due interi in ingresso
-int quad(int); //calcola il quadrato di un intero in gresso
+int quad(int); //calcola il quadrato di un intero in ingresso
 
 int main(int argc, char *argv[]){ //considero gli argomenti inseriti col programma
 
     if(argc != 3){ // verifico ci siano due e solo due argomenti (argc conta anche il nome del programma contenuto in argv[0])
 
-        printf("Devi inserire due numeri interi dopo il nome del programma!\n");
+        printf("Devi inserire due numeri interi dopo il nome del programma!\n(Es. ./funcMain180625 10 11)\n");
         exit(0); //interrompo il programma nel caso l'utente non abbia inserito i due argomenti necessari
 
     }
