@@ -6,32 +6,44 @@ typedef struct{
     int anno;
 } Macchina;
 
-int main(){
+int main(int argc, char *argv[]){
 
-    int quante;
-    Macchina macc[50];
+    //verifico ci sia almeno un argomento oltre al nome del programma
+    if(argc <= 1){
+        printf("\n");
+        printf("!Devi inserire un intero compreso tra 1 e 50 per avviare il programma!\n");
+        printf("\n");
+        printf("Es. ex-struct190625 5\n");
+        printf("\n");
 
-    printf("Quante macchine vuoi inserire? ");
-    scanf("%d", &quante);
-
-    while(quante <= 0 || quante > 50){ //il numero di interi deve essere compreso tra 1 e 50 oppure lo chiede di nuovo
-        printf("Puoi inserirne massimo 50 macchine!\n");
-        printf("Dimmi quante macchine vuoi inserire: ");
-        scanf("%d", &quante);
+        return EXIT_FAILURE;
     }
 
-    for(int i = 0; i < quante; i++){
-        printf("Inserisci il modello: ");
-        scanf("%30s", macc[i].modello);
-        printf("Inserisci l'anno: ");
-        scanf("%d", &macc[i].anno);
-    }
-
-    for(int i = 0; i < quante; i++){
-        printf("Modello: %s; Anno: %d\n", macc[i].modello, macc[i].anno);
-    }
-
+    size_t n = (size_t)atoi(argv[1]); //numero di elementi dell'array che conterrà le macchine inserite
     
+    //alloco la memoria per l'array che conterrà le struct macchina
+    Macchina *macc = malloc(n * sizeof *macc);
+    if (macc == NULL) {                     // 2) Controllo di errore
+        fprintf(stderr, "malloc fallita\n");
+        return EXIT_FAILURE;
+    }
 
-    return 0;
+    //valorizzazione dei componenti l'array
+    for(size_t i = 0; i < n; i++){
+        printf("Inserisci il modello e l'anno (Golf 2011): ");
+        scanf("%30s %d", macc[i].modello,&macc[i].anno);
+    }
+
+    printf("\n");
+
+    //stampo su stdout le macchine dell'array
+    for(size_t i = 0; i < n; i++){
+        printf("Modello: %s, Anno: %d\n", macc[i].modello, macc[i].anno);
+    }
+
+    //libero la memoria occupata dall'arrayf
+    free(macc);
+    macc == NULL;
+
+    return EXIT_SUCCESS;
 }
