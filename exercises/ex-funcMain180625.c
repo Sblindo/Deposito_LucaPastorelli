@@ -28,16 +28,16 @@ int main(int argc, char *argv[]){ //considero gli argomenti inseriti col program
 
 int maximum(int x, int y){
 
-    int max = x;
+    int max = x; //considero il primo intero come massimo
 
-    if(y > x) max = y;
+    if(y > x) max = y; //se il secondo intero è maggiore di max lo sostituisco al valore massimo
 
-    return max;
+    return max; //restituisco la variabile max
 }
 
 int quad(int z){
     
-    int q = z * z;
+    int q = z * z; //produco il prodotto dell'intero inserito 
 
-    return q;
+    return q; //retituisco il valore di q
 }
