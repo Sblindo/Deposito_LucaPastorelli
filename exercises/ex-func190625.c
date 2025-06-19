@@ -39,15 +39,15 @@ int inserisci(int c, int num[]){
 }
 
 int media(int d, int num1[]){ //calcola la media dei numeri in un array di int
-    int somma, media;
+    int somma, med;
 
     for(int i = 0; i < d; i++){
         somma += num1[i];
     }
 
-    media = somma / d;
+    med = somma / d;
 
-    return media;
+    return med;
 }
 
 int sopraMedia(int e, int num2[]){
@@ -56,7 +56,7 @@ int sopraMedia(int e, int num2[]){
     media1 = media(e, num2);
 
     for(int j = 0; j < e; j++){
-        if(num2[j] > media1) cont++;
+        if(num2[j] > media1)cont++;
     }
 
     return cont;
