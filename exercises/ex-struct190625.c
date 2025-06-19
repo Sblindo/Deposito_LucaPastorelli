@@ -41,7 +41,7 @@ int main(int argc, char *argv[]){
         printf("Modello: %s, Anno: %d\n", macc[i].modello, macc[i].anno);
     }
 
-    //libero la memoria occupata dall'arrayf
+    //libero la memoria occupata dall'array
     free(macc);
     macc == NULL;
 
