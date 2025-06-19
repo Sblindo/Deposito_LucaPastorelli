@@ -6,6 +6,17 @@ typedef struct{
     int anno;
 } Macchina;
 
+int media(Macchina *macc,size_t m){
+    int somma = 0;
+
+    for(size_t i = 0; i < m; i++){
+        somma += macc[(int)i].anno;
+    }
+
+    return somma / (int)m;
+
+};
+
 int main(int argc, char *argv[]){
 
     //verifico ci sia almeno un argomento oltre al nome del programma
@@ -20,7 +31,9 @@ int main(int argc, char *argv[]){
     }
 
     size_t n = (size_t)atoi(argv[1]); //numero di elementi dell'array che conterrà le macchine inserite
-    
+    int med; //media anno produzione macchine
+
+
     //alloco la memoria per l'array che conterrà le struct macchina
     Macchina *macc = malloc(n * sizeof *macc);
     if (macc == NULL) {                     // 2) Controllo di errore
@@ -40,6 +53,10 @@ int main(int argc, char *argv[]){
     for(size_t i = 0; i < n; i++){
         printf("Modello: %s, Anno: %d\n", macc[i].modello, macc[i].anno);
     }
+
+    med = media(macc,n); //media anno produzione delle automobili inserite
+
+    printf("La media dell'anno di produzione delle automobili inserite è: %d\n", med);
 
     //libero la memoria occupata dall'array
     free(macc);
