@@ -6,7 +6,7 @@
 
 int main(int argc, char *argv[]){
 
-
+    
 
     //Esco dal programma senza errori
     return EXIT_SUCCESS;
