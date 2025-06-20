@@ -47,7 +47,7 @@ int main(int argc, char *argv[]){
         printf("\n");
         printf("!Devi inserire un intero compreso tra 1 e 5 per avviare il programma!\n");
         printf("\n");
-        printf("Es. ./ex-struct_2_190625 5\n");
+        printf("Es. ./ex-finale200625 5\n");
         printf("\n");
 
         return EXIT_FAILURE;
